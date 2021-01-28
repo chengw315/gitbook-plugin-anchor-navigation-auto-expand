@@ -46,15 +46,33 @@ var insertAnchors = function(section) {
         return;
     }
 
-    var html = "<div id='anchors-navbar'><i class='fa fa-anchor'></i><ul>";
+    var html = "<div id='anchors-navbar' onmouseenter='navMouseEnter()' onmouseleave='navMouseLeave()'><ul class='dirList'";
+    if(config.autoExpand) {
+        html += " sytle=\"display:block\"";
+    } else {
+        html += " sytle=\"display:none\"";
+    }
+    html += ">";
     for(var i=0;i<array.length;i++){
         html += "<li><a href='#"+array[i].url+"'>"+array[i].name+"</a></li>";
         if(array[i].children.length>0){
-            html += "<ul>"
+            html += "<ul class='dirList'";
+            if(config.autoExpand) {
+                html += " sytle=\"display:block\"";
+            } else {
+                html += " sytle=\"display:none\"";
+            }
+            html += ">";
             for(var j=0;j<array[i].children.length;j++){
                 html += "<li><a href='#"+array[i].children[j].url+"'>"+array[i].children[j].name+"</a></li>";
                 if(array[i].children[j].children.length>0){
-                    html += "<ul>"
+                    html += "<ul class='dirList'";
+                    if(config.autoExpand) {
+                        html += " sytle=\"display:block\"";
+                    } else {
+                        html += " sytle=\"display:none\"";
+                    }
+                    html += ">";
                     for(var k=0;k<array[i].children[j].children.length;k++){
                         html += "<li><a href='#"+array[i].children[j].children[k].url+"'>"+array[i].children[j].children[k].name+"</a></li>";
                     }
@@ -72,6 +90,17 @@ var insertAnchors = function(section) {
 
 
 };
+
+function navMouseEnter(){
+    for (const element of document.getElementsByClassName('dirList')) {
+        element.style.display = 'block'
+    }
+}
+function navMouseLeave(){
+    for (const element of document.getElementsByClassName('dirList')) {
+        element.style.display = 'none'
+    }
+}
 
 module.exports = {
     book: {

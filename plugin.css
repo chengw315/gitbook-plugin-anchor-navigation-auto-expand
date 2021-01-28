@@ -17,14 +17,10 @@
 }
 
 #anchors-navbar ul{
-    display: none;
     text-align: left;
     padding-right: 10px;
 }
 
-#anchors-navbar:hover ul{
-    display: block;
-}
 
 #goTop{
     position: fixed;

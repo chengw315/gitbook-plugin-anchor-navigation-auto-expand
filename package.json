@@ -1,20 +1,29 @@
 {
-    "name": "gitbook-plugin-anchor-navigation",
-    "description": "Add anchor navigation and goto Top to your Gitbook",
-    "main": "index.js",
-    "version": "0.0.1",
-    "license": "Apache 2",
-    "author": "yaneryou<xxdawei@gmail.com>",
-    "engines": {
-        "gitbook": "*"
-    },
-    "homepage": "https://github.com/yaneryou/gitbook-plugin-anchor-navigation",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/yaneryou/gitbook-plugin-anchor-navigation.git"
-    },
-    "dependencies": {
-        "cheerio": "*",
-        "underscore": "*"
-    }
+  "name": "gitbook-plugin-anchor-navigation-auto-expand",
+  "description": "Add anchor navigation and goto Top to your Gitbook",
+  "main": "index.js",
+  "version": "0.0.1",
+  "license": "Apache-2.0",
+  "author": "yaneryou <xxdawei@gmail.com>",
+  "engines": {
+    "gitbook": "*"
+  },
+  "homepage": "https://github.com/chengw315/gitbook-plugin-anchor-navigation-auto-expand",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chengw315/gitbook-plugin-anchor-navigation-auto-expand.git"
+  },
+  "dependencies": {
+    "cheerio": "*",
+    "underscore": "*"
+  },
+  "bugs": {
+    "url": "https://github.com/chengw315/gitbook-plugin-anchor-navigation-auto-expand/issues"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "gitbook-plugin-anchor-navigation-auto-expand"
+  ]
 }
