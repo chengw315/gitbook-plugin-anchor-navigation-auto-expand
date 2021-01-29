@@ -1,4 +1,4 @@
-# gitbook-plugin-anchor-navigation-ex
+# gitbook-plugin-anchor-navigation-auto-expand
 
 >  forked from [yaneryou/gitbook-plugin-anchor-navigation](https://github.com/yaneryou/gitbook-plugin-anchor-navigation)
 
@@ -12,10 +12,16 @@ just one:
 
 edit **book.json**
 
-```
+```json
 "plugins": [
     "anchor-navigation-ex"
-  ]
+]
+
+"pluginsConfig": {
+    "anchor-navigation-auto-expand": {
+        "autoExpand": true //auto expand ?
+    }
+}
 ```
 
 then **install the plugin**
@@ -24,4 +30,3 @@ then **install the plugin**
 $ gitbook install
 ```
 
-**more configuration** in [yaneryou/gitbook-plugin-anchor-navigation](https://github.com/yaneryou/gitbook-plugin-anchor-navigation)
