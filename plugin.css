@@ -1,9 +1,13 @@
 #anchors-navbar{
-    border: 1px solid #ccc;
-    box-shadow: 5px 5px 2px #ccc;
+    background-color: #fafafa;
+    border: 1px solid rgba(0, 0, 0, .07);
+    border-radius: 1px;
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    background-clip: padding-box;
     padding: 5px 10px;
     position: fixed;
-    background-color: #fff;
+    /*background-color: rgba(255,255,255,0.98);*/
     right: 50px;
     top: 68px;
     font-size: 12px;

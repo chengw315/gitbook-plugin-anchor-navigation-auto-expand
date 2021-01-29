@@ -53,11 +53,11 @@ var insertAnchors = function(page) {
     let autoExpand = config.config.autoExpand;
     console.info(autoExpand);
 
-    var html = "<div id='anchors-navbar' onmouseenter='navMouseEnter()' onmouseleave='navMouseLeave()'><ul class='dirList'";
+    var html = "<div id='anchors-navbar' onmouseenter='navMouseEnter()' onmouseleave='navMouseLeave()'><i class=\"fa fa-navicon\"></i><ul class='dirList'";
     if(autoExpand) {
-        html += " sytle=\"display:block\"";
+        html += " style=\"display:block\"";
     } else {
-        html += " sytle=\"display:none\"";
+        html += " style=\"display:none\"";
     }
     html += ">";
     for(var i=0;i<array.length;i++){
@@ -65,9 +65,9 @@ var insertAnchors = function(page) {
         if(array[i].children.length>0){
             html += "<ul class='dirList'";
             if(autoExpand) {
-                html += " sytle=\"display:block\"";
+                html += " style=\"display:block\"";
             } else {
-                html += " sytle=\"display:none\"";
+                html += " style=\"display:none\"";
             }
             html += ">";
             for(var j=0;j<array[i].children.length;j++){
@@ -75,9 +75,9 @@ var insertAnchors = function(page) {
                 if(array[i].children[j].children.length>0){
                     html += "<ul class='dirList'";
                     if(autoExpand) {
-                        html += " sytle=\"display:block\"";
+                        html += " style=\"display:block\"";
                     } else {
-                        html += " sytle=\"display:none\"";
+                        html += " style=\"display:none\"";
                     }
                     html += ">";
                     for(var k=0;k<array[i].children[j].children.length;k++){
