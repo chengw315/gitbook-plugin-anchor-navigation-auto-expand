@@ -25,18 +25,40 @@ var insertAnchors = function(page) {
                 });
                 break;
             case "h2":
-                array[array.length-1].children.push({
-                    name: header.text(),
-                    url: id,
-                    children: []
-                });
+                if (array.length < 1) {
+                    array.push({
+                        name: header.text(),
+                        url: id,
+                        children: []
+                    });
+                } else {
+                    array[array.length - 1].children.push({
+                        name: header.text(),
+                        url: id,
+                        children: []
+                    });
+                }
                 break;
             case "h3":
-                array[array.length-1].children[array[array.length-1].children.length-1].children.push({
-                    name: header.text(),
-                    url: id,
-                    children: []
-                });
+                if (array.length < 1) {
+                    array.push({
+                        name: header.text(),
+                        url: id,
+                        children: []
+                    });
+                } else if (array[array.length-1].children.length < 1){
+                    array[array.length - 1].children.push({
+                        name: header.text(),
+                        url: id,
+                        children: []
+                    });
+                } else {
+                    array[array.length-1].children[array[array.length-1].children.length-1].children.push({
+                        name: header.text(),
+                        url: id,
+                        children: []
+                    });
+                }
                 break;
             default:
                 break;

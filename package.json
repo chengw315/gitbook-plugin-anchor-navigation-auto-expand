@@ -2,7 +2,7 @@
   "name": "gitbook-plugin-anchor-navigation-auto-expand",
   "description": "Add anchor navigation and goto Top to your Gitbook",
   "main": "index.js",
-  "version": "0.3.6",
+  "version": "0.3.8",
   "license": "Apache-2.0",
   "author": "yaneryou <xxdawei@gmail.com>",
   "engines": {

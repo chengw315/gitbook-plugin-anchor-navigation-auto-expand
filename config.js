@@ -7,11 +7,11 @@ function init(bookIns) {
     var config = bookIns.config.get('pluginsConfig')['anchor-navigation-auto-expand'];
     console.info("config init half");
     if (config == undefined) {
-        config.warn("config not found");
+        console.warn("config not found，will use default config");
         return
     }
     if (config.autoExpand == undefined) {
-        config.warn("config autoExpand not found");
+        console.warn("config autoExpand not found，will use default config");
         return
     }
     console.info("get config");
